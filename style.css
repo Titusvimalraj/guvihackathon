@@ -41,6 +41,21 @@ h1{
     font-size: 3rem;
 }
 
+button{
+    outline: none;
+}
+button:hover{
+    background-color: #2c4aad;
+    cursor: pointer;
+}
+
+button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+    outline: none;
+  }
+
 #controls{
     background: transparent;
     height: 10vh;
