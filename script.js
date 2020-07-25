@@ -1,3 +1,6 @@
+import { boardSchema } from './boardSchema.js';
+import {draw, update} from './draw.js';
+
 const gameBoard = document.getElementById('game-board');
 const resetButton = document.getElementsByClassName('reset-button')[0];
 const startButton = document.getElementsByClassName('start-button')[0];
@@ -70,9 +73,10 @@ let gameOn = () => {
         timer.innerHTML = millisToMinutesAndSeconds(timeLeft);
     }, 1000)
 
-
+    
 }
 
+console.log(boardSchema);
 
 
 
