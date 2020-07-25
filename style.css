@@ -1,0 +1,186 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+html, body, main, section{
+    display: flex;
+    /* justify-content: center; */
+    height: 101vmin;
+    width: 100%;
+}
+
+
+body::-webkit-scrollbar {
+    width: 1em;
+  }
+   
+  body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px white;
+  }
+   
+  body::-webkit-scrollbar-thumb {
+    background-color: rgb(230, 69, 69);
+    outline: 1px solid slategrey;
+  }
+
+section{
+    background: rgb(148,58,180);
+    background: -moz-linear-gradient(34deg, rgba(148,58,180,1) 0%, rgba(100,29,253,1) 50%, rgba(252,69,248,1) 100%);
+    background: -webkit-linear-gradient(34deg, rgba(148,58,180,1) 0%, rgba(100,29,253,1) 50%, rgba(252,69,248,1) 100%);
+    background: linear-gradient(34deg, rgba(148,58,180,1) 0%, rgba(100,29,253,1) 50%, rgba(252,69,248,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#943ab4",endColorstr="#fc45f8",GradientType=1);
+
+    flex-direction: column;
+}
+
+h1{
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+}
+
+#controls{
+    background: transparent;
+    height: 10vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1%;
+}
+
+#controls > button, div {
+    height: max-content;
+}
+
+.control-buttons{
+    justify-content: space-around;
+    display: flex;
+    flex-flow: row;
+    width: 30vw;
+}
+
+.start-button{
+    background-color: #54f23e;
+    border: 5px solid white;
+    font-size: 1.5rem;
+    padding: 1rem;
+    color: white;
+    /* -webkit-box-shadow: 0px 0px 23px 20px rgba(116,34,171,0.64);
+    -moz-box-shadow: 0px 0px 23px 20px rgba(116,34,171,0.64);
+    box-shadow: 0px 0px 23px 20px rgba(116,34,171,0.64); */
+    border-radius: 30%;
+}
+
+.reset-button{
+    background-color: #f24a3e;
+    border: 5px solid white;
+    font-size: 1.5rem;
+    padding: 1rem;
+    color: white;
+    /* -webkit-box-shadow: 0px 0px 23px 20px rgba(116,34,171,0.64);
+    -moz-box-shadow: 0px 0px 23px 20px rgba(116,34,171,0.64);
+    box-shadow: 0px 0px 23px 20px rgba(116,34,171,0.64); */
+    border-radius: 30%;
+}
+
+
+
+#game-board{
+    background-color: white;
+    width: 81vmin;
+    height: 74vmin;
+    display: flex;
+    flex-flow: row wrap;
+    /* grid-template-rows: repeat(9, 1fr);
+    grid-template-columns: repeat(9, 1fr); */
+    padding: 2vmin 0vmin 2vmin 7vmin;
+    align-content: flex-start;
+    border-radius: 10%;
+}
+
+#display-content{
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+    flex-flow: row wrap;
+    align-content: space-around;
+    justify-content: center;
+}
+
+.grid-item{
+    width: 8vmin;
+    height: 8vmin;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    border: 1px solid black;  
+}
+
+.grid-item > div{
+    width: 8vmin;
+    height: 8vmin;
+    border: none;
+}
+
+.timer{
+    font-size: 2.5rem;
+    color: white;
+}
+
+@media only screen and (min-width: 1200px) {}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {}
+
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {}
+
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+    #controls{        
+        width: 70vw;
+        height: 30vh;
+        flex-direction: column;
+    }
+
+    .control-buttons{
+        width: 50vw;
+    }
+
+    html, body, main, section{
+        display: flex;
+        /* justify-content: center; */
+        height: 130vh;
+        width: 100%;
+    }
+
+    #game-board{
+        padding: 5vmin 0vmin 2vmin 5vmin!important;
+        height: 81vmin!important;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    #controls{        
+        width: 70vw;
+        height: 30vh;
+        flex-direction: column;
+    }
+
+    .control-buttons{
+        width: 80vw;
+    }
+
+    html, body, main, section{
+        display: flex;
+        /* justify-content: center; */
+        height: 120vh;
+        width: 100%;
+    }
+
+    #game-board{
+        padding: 5vmin 0vmin 2vmin 5vmin!important;
+        height: 81vmin!important;
+    }
+}

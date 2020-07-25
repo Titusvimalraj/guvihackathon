@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+        
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="selectOption.css">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <main>
+            <section>
+                <h1>
+                     Sudoku   
+                </h1>
+                <div id="display-content">
+                    <div id="controls">
+                        <div class="control-buttons">
+                            <button class="start-button">
+                                Start
+                            </button>
+                            <button class="reset-button">
+                                Reset
+                            </button>
+    
+                        </div>
+                                               
+                        <div class="select">
+                            <select name="slct" id="slct">
+                              <option selected value="0">
+                                Easy
+                            </option>
+                            <option value="1">
+                                Medium
+                            </option>
+                            <option value="2">
+                                Hard
+                            </option>
+                            </select>
+                          </div>
+                       
+
+                        <div class="timer">
+                            <p>04:00</p>
+                        </div>
+                    </div>
+                    <div id="game-board">
+                        <div class="grid-item">
+                            <div type="number" name="01" id="01"></div>
+                        </div>
+                        <div class="grid-item">
+                            <div type="number" name="02" id="02"></div>
+                        </div>
+                        <div class="grid-item">
+                            <div type="number" name="03" id="03"></div>
+                        </div>
+                        <div class="grid-item">
+                            <div type="number" name="04" id="04"></div>
+                        </div>
+                        <div class="grid-item">
+                            <div type="number" name="05" id="05"></div>
+                        </div>
+                        <div class="grid-item">
+                            <div type="number" name="06" id="01"></div>
+                        </div>
+                        <div class="grid-item">
+                            <div type="number" name="07" id="07"></div>
+                        </div>
+                        <div class="grid-item">
+                            <div type="number" name="08" id="08"></div>
+                        </div>
+                        <div class="grid-item">
+                            <div type="number" name="09" id="09"></div>
+                        </div>
+
+                        
+                        <div class="grid-item">
+                            <div type="number" name="01" id="01"></div>
+                        </div>
+                        <div class="grid-item">
+                            <div type="number" name="02" id="02"></div>
+                        </div>
+                        <div class="grid-item">
+                            <div type="number" name="03" id="03"></div>
+                        </div>
+                        <div class="grid-item">
+                            <div type="number" name="04" id="04"></div>
+                        </div>
+                        <div class="grid-item">
+                            <div type="number" name="05" id="05"></div>
+                        </div>
+                        <div class="grid-item">
+                            <div type="number" name="06" id="01"></div>
+                        </div>
+                        <div class="grid-item">
+                            <div type="number" name="07" id="07"></div>
+                        </div>
+                        <div class="grid-item">
+                            <div type="number" name="08" id="08"></div>
+                        </div>
+                        <div class="grid-item">
+                            <div type="number" name="09" id="09"></div>
+                        </div>
+
+                        
+                        <div class="grid-item">
+                            <div type="number" name="01" id="01"></div>
+                        </div>
+                        <div class="grid-item">
+                            <div type="number" name="02" id="02"></div>
+                        </div>
+                        <div class="grid-item">
+                            <div type="number" name="03" id="03"></div>
+                        </div>
+                        <div class="grid-item">
+                            <div type="number" name="04" id="04"></div>
+                        </div>
+                        <div class="grid-item">
+                            <div type="number" name="05" id="05"></div>
+                        </div>
+                        <div class="grid-item">
+                            <div type="number" name="06" id="01"></div>
+                        </div>
+                        <div class="grid-item">
+                            <div type="number" name="07" id="07"></div>
+                        </div>
+                        <div class="grid-item">
+                            <div type="number" name="08" id="08"></div>
+                        </div>
+                        <div class="grid-item">
+                            <div type="number" name="09" id="09"></div>
+                        </div>
+
+                        
+                        <div class="grid-item">
+                            <div type="number" name="01" id="01"></div>
+                        </div>
+                        <div class="grid-item">
+                            <div type="number" name="02" id="02"></div>
+                        </div>
+                        <div class="grid-item">
+                            <div type="number" name="03" id="03"></div>
+                        </div>
+                        <div class="grid-item">
+                            <div type="number" name="04" id="04"></div>
+                        </div>
+                        <div class="grid-item">
+                            <div type="number" name="05" id="05"></div>
+                        </div>
+                        <div class="grid-item">
+                            <div type="number" name="06" id="01"></div>
+                        </div>
+                        <div class="grid-item">
+                            <div type="number" name="07" id="07"></div>
+                        </div>
+                        <div class="grid-item">
+                            <div type="number" name="08" id="08"></div>
+                        </div>
+                        <div class="grid-item">
+                            <div type="number" name="09" id="09"></div>
+                        </div>
+
+                        
+                        <div class="grid-item">
+                            <div type="number" name="01" id="01"></div>
+                        </div>
+                        <div class="grid-item">
+                            <div type="number" name="02" id="02"></div>
+                        </div>
+                        <div class="grid-item">
+                            <div type="number" name="03" id="03"></div>
+                        </div>
+                        <div class="grid-item">
+                            <div type="number" name="04" id="04"></div>
+                        </div>
+                        <div class="grid-item">
+                            <div type="number" name="05" id="05"></div>
+                        </div>
+                        <div class="grid-item">
+                            <div type="number" name="06" id="01"></div>
+                        </div>
+                        <div class="grid-item">
+                            <div type="number" name="07" id="07"></div>
+                        </div>
+                        <div class="grid-item">
+                            <div type="number" name="08" id="08"></div>
+                        </div>
+                        <div class="grid-item">
+                            <div type="number" name="09" id="09"></div>
+                        </div>
+
+                        
+                        <div class="grid-item">
+                            <div type="number" name="01" id="01"></div>
+                        </div>
+                        <div class="grid-item">
+                            <div type="number" name="02" id="02"></div>
+                        </div>
+                        <div class="grid-item">
+                            <div type="number" name="03" id="03"></div>
+                        </div>
+                        <div class="grid-item">
+                            <div type="number" name="04" id="04"></div>
+                        </div>
+                        <div class="grid-item">
+                            <div type="number" name="05" id="05"></div>
+                        </div>
+                        <div class="grid-item">
+                            <div type="number" name="06" id="01"></div>
+                        </div>
+                        <div class="grid-item">
+                            <div type="number" name="07" id="07"></div>
+                        </div>
+                        <div class="grid-item">
+                            <div type="number" name="08" id="08"></div>
+                        </div>
+                        <div class="grid-item">
+                            <div type="number" name="09" id="09"></div>
+                        </div>
+
+                        
+                        <div class="grid-item">
+                            <div type="number" name="01" id="01"></div>
+                        </div>
+                        <div class="grid-item">
+                            <div type="number" name="02" id="02"></div>
+                        </div>
+                        <div class="grid-item">
+                            <div type="number" name="03" id="03"></div>
+                        </div>
+                        <div class="grid-item">
+                            <div type="number" name="04" id="04"></div>
+                        </div>
+                        <div class="grid-item">
+                            <div type="number" name="05" id="05"></div>
+                        </div>
+                        <div class="grid-item">
+                            <div type="number" name="06" id="01"></div>
+                        </div>
+                        <div class="grid-item">
+                            <div type="number" name="07" id="07"></div>
+                        </div>
+                        <div class="grid-item">
+                            <div type="number" name="08" id="08"></div>
+                        </div>
+                        <div class="grid-item">
+                            <div type="number" name="09" id="09"></div>
+                        </div>
+
+                        
+                        <div class="grid-item">
+                            <div type="number" name="01" id="01"></div>
+                        </div>
+                        <div class="grid-item">
+                            <div type="number" name="02" id="02"></div>
+                        </div>
+                        <div class="grid-item">
+                            <div type="number" name="03" id="03"></div>
+                        </div>
+                        <div class="grid-item">
+                            <div type="number" name="04" id="04"></div>
+                        </div>
+                        <div class="grid-item">
+                            <div type="number" name="05" id="05"></div>
+                        </div>
+                        <div class="grid-item">
+                            <div type="number" name="06" id="01"></div>
+                        </div>
+                        <div class="grid-item">
+                            <div type="number" name="07" id="07"></div>
+                        </div>
+                        <div class="grid-item">
+                            <div type="number" name="08" id="08"></div>
+                        </div>
+                        <div class="grid-item">
+                            <div type="number" name="09" id="09"></div>
+                        </div>
+
+                        
+                        <div class="grid-item">
+                            <div type="number" name="01" id="01"></div>
+                        </div>
+                        <div class="grid-item">
+                            <div type="number" name="02" id="02"></div>
+                        </div>
+                        <div class="grid-item">
+                            <div type="number" name="03" id="03"></div>
+                        </div>
+                        <div class="grid-item">
+                            <div type="number" name="04" id="04"></div>
+                        </div>
+                        <div class="grid-item">
+                            <div type="number" name="05" id="05"></div>
+                        </div>
+                        <div class="grid-item">
+                            <div type="number" name="06" id="01"></div>
+                        </div>
+                        <div class="grid-item">
+                            <div type="number" name="07" id="07"></div>
+                        </div>
+                        <div class="grid-item">
+                            <div type="number" name="08" id="08"></div>
+                        </div>
+                        <div class="grid-item">
+                            <div type="number" name="09" id="09"></div>
+                        </div>
+
+                        
+                        
+                       
+                        
+                    </div>
+                </div>                
+            </section>
+        </main>
+        <script src="script.js" async defer></script>
+    </body>
+</html>
