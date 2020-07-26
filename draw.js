@@ -1,5 +1,5 @@
 import {gen_Random} from './util.js'
-import {timeLeft, resetTheGame, score} from './script.js'
+import {timeLeft, resetTheGame, score, gameBoard} from './script.js'
 
 export let oneDimBoard = [];
 export let newBoard = [];
@@ -40,10 +40,19 @@ export const update = () => {
     // console.log('hello world');
     // console.log(newBoard);
     if(localStorage.getItem('highScore')){
-        score.innerText = `score: ${localStorage.getItem('score')}         highscore:${localStorage.getItem('highscore')}`;
+        score.innerText = `score: ${localStorage.getItem('score')}         highscore:${localStorage.getItem('highScore')}`;
     }
-
-    if(timeLeft > 0 && oneDimBoard.toString() == newBoard.toString()){
+    console.log(timeLeft);
+    if(oneDimBoard.toString() == newBoard.toString()){
+        let scored = Math.floor((4*60000-timeLeft)/(4*60000) * 100);
+        if(scored > localStorage.getItem('highScore')){
+            alert('Congratulations!!! You have aquired the highest score');
+            localStorage.setItem('highScore',scored);
+            localStorage.setItem('score', scored);
+        }else{
+            localStorage.setItem('score', scored);
+        }       
+        
         gameBoard.innerHTML = `<h1 class="thank-you">You have won! Thank you For Playing</h1>`
         setTimeout(() => {
             resetTheGame();    

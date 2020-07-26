@@ -1,7 +1,7 @@
 import { board } from './boardSchema.js';
 import { draw, update, newBoard, oneDimBoard } from './draw.js';
 
-const gameBoard = document.getElementById('game-board');
+export const gameBoard = document.getElementById('game-board');
 const resetButton = document.getElementsByClassName('reset-button')[0];
 const startButton = document.getElementsByClassName('start-button')[0];
 const selectLevel = document.getElementById('slct');
@@ -38,7 +38,7 @@ selectLevel.addEventListener('change', () => {
 
 
 if(localStorage.getItem('highScore')){
-    score.innerText = `score: ${localStorage.getItem('score')}         highscore:${localStorage.getItem('highscore')}`;
+    score.innerText = `score: ${localStorage.getItem('score')}         highscore:${localStorage.getItem('highScore')}`;
 }else{
     localStorage.setItem('highScore',0);
     localStorage.setItem('score', 0)
@@ -57,20 +57,24 @@ for (let i = 0; i < 81; i++) {
     
     gameBoard.appendChild(gridItem);
     gridItem.children[0].addEventListener('click',function increm(){
+        console.log(oneDimBoard);
+        console.log(newBoard);
         
+        console.log(oneDimBoard.toString() == newBoard.toString());
         let previousValue = parseInt(gridItem.children[0].innerText)||0;
         if(previousValue < 9){
             previousValue++;
             gridItem.children[0].innerText = previousValue;
-            if(newBoard[i] == 0){
+            
                 newBoard[i] = previousValue;
-            }
+            
             
         }else{
+            previousValue = 1;
             gridItem.children[0].innerText = previousValue;
-            if(newBoard[i] == 0){
+            
                 newBoard[i] = previousValue;
-            }
+            
         }
     })
 }
