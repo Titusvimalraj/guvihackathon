@@ -16,6 +16,7 @@ select {
   /* Custom Select */
   .select {
     position: relative;
+    visibility: hidden;
     display: flex;
     width: 15em;
     height: 3em;
