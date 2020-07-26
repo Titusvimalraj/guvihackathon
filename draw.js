@@ -13,17 +13,17 @@ export const draw = (boards, level, element) => {
     }
     let oneDBoard = oneDimBoard.slice(0);
     if (level == 4) {
-        let arr = gen_Random(40)
+        let arr = gen_Random(70)
          arr.forEach(el=> oneDBoard[el] = 0);
         
     } else if (level == 3) {
-        let arr = gen_Random(20)
+        let arr = gen_Random(40)
         arr.forEach(el=> oneDBoard[el] = 0);
     } else {
         let arr = gen_Random(10)
         arr.forEach(el=> oneDBoard[el] = 0);
     }
-    // console.log(oneDBoard);
+    console.log(oneDBoard);
     // console.log(element);
     newBoard = oneDBoard.slice(0);
     
