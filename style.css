@@ -35,6 +35,8 @@ section{
     flex-direction: column;
 }
 
+
+
 h1{
     text-align: center;
     color: white;
@@ -55,6 +57,18 @@ button:active {
     transform: translateY(4px);
     outline: none;
   }
+
+
+.heading-score{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}  
+
+.score{
+    color: white;
+}
+
 
 #controls{
     background: transparent;
@@ -132,12 +146,17 @@ button:active {
     justify-content: center;
     align-content: center;
     border: 1px solid black;  
+    
 }
 
 .grid-item > div{
     width: 8vmin;
     height: 8vmin;
     border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
 
 .timer{
@@ -198,4 +217,8 @@ button:active {
         padding: 5vmin 0vmin 2vmin 5vmin!important;
         height: 81vmin!important;
     }
+}
+
+.thank-you{
+    color: black;
 }

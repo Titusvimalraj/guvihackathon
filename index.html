@@ -20,9 +20,16 @@
         <![endif]-->
         <main>
             <section>
-                <h1>
-                     Sudoku   
-                </h1>
+                <div class="heading-score">
+                    <h1>
+                        Sudoku   
+                   </h1>
+                   &emsp14;&emsp14;&emsp14;&emsp14;&emsp14;
+                   <h2 class="score">
+                       Score: 0
+                   </h2>     
+                </div>
+               
                 <div id="display-content">
                     <div id="controls">
                         <div class="control-buttons">
@@ -36,14 +43,14 @@
                         </div>
                                                
                         <div class="select">
-                            <select name="slct" id="slct">
-                              <option selected value="1">
+                            <select disabled name="slct" id="slct">
+                              <option  value="1">
                                 Easy
                             </option>
-                            <option value="2">
+                            <option value="3">
                                 Medium
                             </option>
-                            <option value="3">
+                            <option selected value="4">
                                 Hard
                             </option>
                             </select>
