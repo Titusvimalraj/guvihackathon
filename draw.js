@@ -42,7 +42,7 @@ export const update = () => {
     if(localStorage.getItem('highScore')){
         score.innerText = `score: ${localStorage.getItem('score')}         highscore:${localStorage.getItem('highScore')}`;
     }
-    console.log(timeLeft);
+  //console.log(timeLeft);
     if(oneDimBoard.toString() == newBoard.toString()){
         let scored = Math.floor((4*60000-timeLeft)/(4*60000) * 100);
         if(scored > localStorage.getItem('highScore')){

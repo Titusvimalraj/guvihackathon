@@ -18,12 +18,12 @@ resetButton.addEventListener('click', () => {
 });
 
 startButton.addEventListener('click', () => {
-    console.log('start button click');
+  //console.log('start button click');
     gameOn();
 });
 
 selectLevel.addEventListener('change', () => {
-    console.log(selectLevel.options[selectLevel.selectedIndex].value);
+  //console.log(selectLevel.options[selectLevel.selectedIndex].value);
     level = selectLevel.options[selectLevel.selectedIndex].value;
 
     if (level == 3) {
@@ -57,10 +57,10 @@ for (let i = 0; i < 81; i++) {
     
     gameBoard.appendChild(gridItem);
     gridItem.children[0].addEventListener('click',function increm(){
-        console.log(oneDimBoard);
-        console.log(newBoard);
+      //console.log(oneDimBoard);
+      //console.log(newBoard);
         
-        console.log(oneDimBoard.toString() == newBoard.toString());
+      //console.log(oneDimBoard.toString() == newBoard.toString());
         let previousValue = parseInt(gridItem.children[0].innerText)||0;
         if(previousValue < 9){
             previousValue++;
