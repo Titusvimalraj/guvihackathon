@@ -64,31 +64,31 @@ export let timeLeft;
 let level = 4;
 
 
-    timer.innerHTML = `04:00`;
+timer.innerHTML = `04:00`;
 
-    resetButton.addEventListener('click', () => {
-        resetTheGame();
-    });
-    
-    startButton.addEventListener('click', () => {
-        //console.log('start button click');
-        gameOn();
-    });
-    
-    selectLevel.addEventListener('change', () => {
-        //console.log(selectLevel.options[selectLevel.selectedIndex].value);
-        level = selectLevel.options[selectLevel.selectedIndex].value;
-    
-        if (level == 3) {
-            timer.innerHTML = `03:00`;
-        } else if (level == 4) {
-            timer.innerHTML = `04:00`;
-        } else {
-            timer.innerHTML = `01:00`;
-        }
-    
-    });
-    
+resetButton.addEventListener('click', () => {
+    resetTheGame();
+});
+
+startButton.addEventListener('click', () => {
+    //console.log('start button click');
+    gameOn();
+});
+
+selectLevel.addEventListener('change', () => {
+    //console.log(selectLevel.options[selectLevel.selectedIndex].value);
+    level = selectLevel.options[selectLevel.selectedIndex].value;
+
+    if (level == 3) {
+        timer.innerHTML = `03:00`;
+    } else if (level == 4) {
+        timer.innerHTML = `04:00`;
+    } else {
+        timer.innerHTML = `01:00`;
+    }
+
+});
+
 
 if (localStorage.getItem('highScore')) {
     score.innerText = `score: ${localStorage.getItem('score')}         highscore:${localStorage.getItem('highScore')}`;
@@ -105,27 +105,7 @@ for (let i = 0; i < 81; i++) {
     gridItem.innerHTML = `<div type="number" class="game-item" name="${i}" id="${i}"></div>`;
 
     gameBoard.appendChild(gridItem);
-    gridItem.children[0].addEventListener('click', function increm() {
-        //console.log(oneDimBoard);
-        //console.log(newBoard);
 
-        //console.log(oneDimBoard.toString() == newBoard.toString());
-        let previousValue = parseInt(gridItem.children[0].innerText) || 0;
-        if (previousValue < 9) {
-            previousValue++;
-            gridItem.children[0].innerText = previousValue;
-
-            newBoard[i] = previousValue;
-
-
-        } else {
-            previousValue = 1;
-            gridItem.children[0].innerText = previousValue;
-
-            newBoard[i] = previousValue;
-
-        }
-    })
 }
 
 
@@ -153,6 +133,34 @@ let gameOn = () => {
     selectLevel.disabled = true;
     draw(board, level, gameBoardItem);
     timeLeft = (level || 1) * 60000;
+
+    let gridItem = document.getElementsByClassName('grid-item');
+    for (let i = 0; i < 81; i++) {
+        if (gridItem[i].children[0].innerText == '') {
+            gridItem[i].children[0].addEventListener('click', function increm() {
+                //console.log(oneDimBoard);
+                //console.log(newBoard);
+
+                //console.log(oneDimBoard.toString() == newBoard.toString());
+                let previousValue = parseInt(gridItem[i].children[0].innerText) || 0;
+                if (previousValue < 9) {
+                    previousValue++;
+                    gridItem[i].children[0].innerText = previousValue;
+
+                    newBoard[i] = previousValue;
+
+
+                } else {
+                    previousValue = 1;
+                    gridItem[i].children[0].innerText = previousValue;
+
+                    newBoard[i] = previousValue;
+
+                }
+            })
+        }
+
+    }
     let displayTime = setInterval(() => {
         if (timeLeft == 0) {
             clearInterval(displayTime);
